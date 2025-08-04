@@ -17,26 +17,46 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 12 88% 59%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 340 82% 52%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
+    --muted: 32 100% 95%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 12 88% 59%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
+
+    /* Marketing Portfolio Colors */
+    --coral: 12 88% 59%;
+    --coral-light: 15 86% 68%;
+    --peach: 25 95% 53%;
+    --pink: 340 82% 52%;
+    --cream: 32 100% 95%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--coral)) 0%, hsl(var(--peach)) 50%, hsl(var(--pink)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--cream)) 0%, hsl(0 0% 100%) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(var(--coral)) 0%, hsl(var(--coral-light)) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(var(--coral) / 0.15);
+    --shadow-card: 0 8px 32px -8px hsl(var(--coral) / 0.1);
+    --shadow-glow: 0 0 40px hsl(var(--coral) / 0.2);
+    
+    /* Animation */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 

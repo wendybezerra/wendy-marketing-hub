@@ -1,0 +1,102 @@
+import { Card } from "@/components/ui/card";
+import { TrendingUp, Users, Target, Award } from "lucide-react";
+
+const About = () => {
+  const stats = [
+    {
+      icon: <TrendingUp className="h-8 w-8 text-coral" />,
+      number: "97K+",
+      label: "Visualizações",
+      description: "Geradas em campanhas"
+    },
+    {
+      icon: <Users className="h-8 w-8 text-coral" />,
+      number: "76K+", 
+      label: "Usuários únicos",
+      description: "Alcançados organicamente"
+    },
+    {
+      icon: <Target className="h-8 w-8 text-coral" />,
+      number: "+58%",
+      label: "Engajamento",
+      description: "Aumento médio"
+    },
+    {
+      icon: <Award className="h-8 w-8 text-coral" />,
+      number: "+42%",
+      label: "Click-through",
+      description: "Taxa de conversão"
+    }
+  ];
+
+  return (
+    <section className="py-20 bg-cream">
+      <div className="container mx-auto px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Sobre Mim
+            </h2>
+            <div className="w-24 h-1 bg-gradient-accent mx-auto mb-8"></div>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Como estrategista de marketing e criadora de conteúdo, me especializo no desenvolvimento de 
+                campanhas orientadas por dados que não apenas alcançam, mas verdadeiramente conectam com audiências.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Com uma base sólida em branding, performance de mídias sociais e engajamento de comunidade, 
+                liderei com sucesso campanhas digitais que geraram resultados extraordinários, mantendo sempre 
+                uma identidade de marca autêntica e consistente.
+              </p>
+              <div className="pt-4">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Especialidades:</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-coral rounded-full mr-3"></div>
+                    Email Marketing & Automação
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-coral rounded-full mr-3"></div>
+                    Social Media Strategy
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-coral rounded-full mr-3"></div>
+                    Content Creation & Branding
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-coral rounded-full mr-3"></div>
+                    Performance Analytics
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-6">
+              {stats.map((stat, index) => (
+                <Card key={index} className="p-6 text-center bg-white shadow-card hover:shadow-glow transition-all duration-300 group">
+                  <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    {stat.icon}
+                  </div>
+                  <div className="text-3xl font-bold text-gray-900 mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-lg font-semibold text-coral mb-1">
+                    {stat.label}
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    {stat.description}
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
