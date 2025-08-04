@@ -6,62 +6,62 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: "Email Campaign Case Study",
-      subtitle: "Weekly Newsletter Campaign for Use Flô",
-      description: "Campanha de newsletter semanal com destaque para produtos, depoimentos, alertas de reestoque e códigos de desconto.",
+      title: "Weekly Newsletter Campaign",
+      subtitle: "Email Marketing Strategy for Use Flô",
+      description: "Created dynamic newsletters featuring product highlights, testimonials, restock alerts, and discount codes to boost customer engagement and drive conversions.",
       platform: "Flodesk",
-      target: "Aumentar re-engajamento e conversões",
+      target: "Increase re-engagement and conversions",
       results: [
-        { metric: "+33%", label: "Aumento no engajamento" },
-        { metric: "+17%", label: "Taxa de click-through" }
+        { metric: "+33%", label: "User Engagement" },
+        { metric: "+17%", label: "Click-Through Rate" }
       ],
       highlights: [
-        "Newsletters dinâmicas com destaques de produtos",
-        "Layouts visualmente engajantes com CTAs",
-        "Segmentação para visitantes recorrentes",
-        "Recuperação automatizada de carrinho"
+        "Dynamic newsletters with product highlights",
+        "Visually engaging layouts with CTAs",
+        "Segmentation for returning visitors",
+        "Automated cart recovery campaigns"
       ],
-      image: "/lovable-uploads/1259b17e-2ac3-4cd0-8216-44df8107ec99.png",
+      image: "/lovable-uploads/69d65d8d-bec7-4805-a25a-a09b872ffa07.png",
       icon: <Mail className="h-6 w-6" />
     },
     {
       id: 2,
-      title: "Email Marketing Impact",
-      subtitle: "Comprehensive Email Campaign Strategy",
-      description: "Estratégia completa de email marketing com templates diversos para diferentes objetivos de conversão.",
+      title: "Fashion Brand Product Clicks",
+      subtitle: "Increasing Product Clicks for a Fashion Brand",
+      description: "Built an email campaign to boost user engagement with Use Flô's latest dress collection, featuring strategic product showcases and compelling call-to-actions.",
       platform: "Flodesk",
-      target: "Maximizar conversões e engajamento",
+      target: "Increase product clicks and engagement",
       results: [
-        { metric: "+33%", label: "Engajamento do usuário" },
-        { metric: "+17%", label: "Taxa de conversão" }
+        { metric: "+42%", label: "Click-Through Rate" },
+        { metric: "+58%", label: "User Engagement" }
       ],
       highlights: [
-        "Templates de boas-vindas personalizados",
-        "Campanhas de carrinho abandonado",
-        "Alertas de reestoque segmentados",
-        "Flash sales com senso de urgência"
+        "Focus on new dress collection",
+        "Impactful visuals with clear CTAs",
+        "Fashion-focused audience segmentation",
+        "Mobile-optimized campaign design"
       ],
-      image: "/lovable-uploads/61846aec-e38e-4445-bf33-4cb069ab5e75.png",
+      image: "/lovable-uploads/9ef140f4-2d77-4331-92cf-6a7cb1d861a8.png",
       icon: <TrendingUp className="h-6 w-6" />
     },
     {
       id: 3,
-      title: "Fashion Brand Product Clicks",
-      subtitle: "Increasing Product Clicks for a Fashion Brand",
-      description: "Campanha de email para impulsionar o engajamento com a mais nova coleção de vestidos da Use Flô.",
+      title: "Customer Testimonial Integration",
+      subtitle: "Social Proof & User-Generated Content Strategy",
+      description: "Integrated customer testimonials and user-generated content to build trust and showcase product quality through authentic customer experiences.",
       platform: "Flodesk",
-      target: "Aumentar cliques em produtos",
+      target: "Build trust and social proof",
       results: [
-        { metric: "+42%", label: "Taxa de click-through" },
-        { metric: "+58%", label: "Engajamento do usuário" }
+        { metric: "+25%", label: "Customer Trust" },
+        { metric: "+40%", label: "Content Engagement" }
       ],
       highlights: [
-        "Foco na nova coleção de vestidos",
-        "Visual impactante com call-to-action",
-        "Segmentação por interesse em moda",
-        "Otimização para dispositivos móveis"
+        "Authentic customer testimonials",
+        "5-star review showcases",
+        "User-generated content integration",
+        "Social proof optimization"
       ],
-      image: "/lovable-uploads/4e281221-5d13-4cc4-99e8-6de3e03a9a78.png",
+      image: "/lovable-uploads/95c632c5-c0cf-4569-82b5-393f8a07872c.png",
       icon: <Users className="h-6 w-6" />
     }
   ];
@@ -72,11 +72,11 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Portfolio de Casos
+              Case Study Portfolio
             </h2>
             <div className="w-24 h-1 bg-gradient-accent mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Campanhas de sucesso que geraram resultados excepcionais através de estratégias data-driven
+              Successful campaigns that generated exceptional results through data-driven strategies
             </p>
           </div>
 
@@ -119,7 +119,7 @@ const Portfolio = () => {
 
                     {/* Target */}
                     <div className="mb-6">
-                      <h5 className="font-semibold text-gray-900 mb-2">Objetivo:</h5>
+                      <h5 className="font-semibold text-gray-900 mb-2">Objective:</h5>
                       <p className="text-gray-700">{project.target}</p>
                     </div>
 
@@ -139,7 +139,7 @@ const Portfolio = () => {
 
                     {/* Strategy Highlights */}
                     <div className="mb-8">
-                      <h5 className="font-semibold text-gray-900 mb-3">Destaques da Estratégia:</h5>
+                      <h5 className="font-semibold text-gray-900 mb-3">Strategy Highlights:</h5>
                       <ul className="space-y-2">
                         {project.highlights.map((highlight, idx) => (
                           <li key={idx} className="flex items-start">
@@ -151,7 +151,7 @@ const Portfolio = () => {
                     </div>
 
                     <Button className="bg-coral hover:bg-coral-light text-white font-semibold">
-                      Ver Detalhes
+                      View Details
                       <ExternalLink className="ml-2 h-4 w-4" />
                     </Button>
                   </div>
