@@ -24,11 +24,11 @@ const Hero = () => {
             Wendy Bezerra
           </h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90 font-light tracking-wide">
-            ESTRATEGISTA DE MARKETING DIGITAL & SOCIAL MEDIA
+            STRATEGIC SOCIAL MEDIA & MARKETING
           </p>
           <p className="text-lg mb-12 opacity-80 max-w-2xl mx-auto leading-relaxed">
-            Especialista em campanhas data-driven que geram resultados extraordinários. 
-            +97K visualizações, +76K usuários únicos alcançados.
+            Specialist in data-driven campaigns that generate extraordinary results. 
+            +97K views, +76K unique users reached.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -37,7 +37,7 @@ const Hero = () => {
               size="lg" 
               className="bg-white text-coral hover:bg-white/90 font-semibold text-lg px-8 py-6 rounded-full transition-all duration-300 hover:shadow-glow"
             >
-              Ver Portfolio
+              View Portfolio
               <ArrowDown className="ml-2 h-5 w-5" />
             </Button>
             <Button 
@@ -47,7 +47,7 @@ const Hero = () => {
               className="border-white text-white hover:bg-white hover:text-coral font-semibold text-lg px-8 py-6 rounded-full transition-all duration-300"
             >
               <Mail className="mr-2 h-5 w-5" />
-              Contato
+              Contact
             </Button>
           </div>
         </div>

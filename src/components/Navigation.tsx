@@ -29,10 +29,10 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { label: 'Início', action: scrollToTop },
+    { label: 'Home', action: scrollToTop },
     { label: 'Portfolio', action: () => scrollToSection('portfolio') },
-    { label: 'Sobre', action: () => scrollToSection('about') },
-    { label: 'Contato', action: () => scrollToSection('contact') }
+    { label: 'About', action: () => scrollToSection('about') },
+    { label: 'Contact', action: () => scrollToSection('contact') }
   ];
 
   return (
@@ -73,7 +73,7 @@ const Navigation = () => {
                   : 'bg-white text-coral hover:bg-white/90'
               } font-semibold px-6 py-2 rounded-full transition-all duration-300`}
             >
-              Trabalhe Comigo
+              Work With Me
             </Button>
           </div>
 
@@ -105,7 +105,7 @@ const Navigation = () => {
                 onClick={() => scrollToSection('contact')}
                 className="w-full bg-coral text-white hover:bg-coral-light font-semibold py-3 rounded-full mt-4"
               >
-                Trabalhe Comigo
+                Work With Me
               </Button>
             </div>
           </div>

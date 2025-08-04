@@ -4,23 +4,23 @@ const About = () => {
   const stats = [{
     icon: <TrendingUp className="h-8 w-8 text-coral" />,
     number: "97K+",
-    label: "Visualizações",
-    description: "Geradas em campanhas"
+    label: "Views",
+    description: "Generated in campaigns"
   }, {
     icon: <Users className="h-8 w-8 text-coral" />,
     number: "76K+",
-    label: "Usuários únicos",
-    description: "Alcançados organicamente"
+    label: "Unique users",
+    description: "Reached organically"
   }, {
     icon: <Target className="h-8 w-8 text-coral" />,
     number: "+58%",
-    label: "Engajamento",
-    description: "Aumento médio"
+    label: "Engagement",
+    description: "Average increase"
   }, {
     icon: <Award className="h-8 w-8 text-coral" />,
     number: "+42%",
     label: "Click-through",
-    description: "Taxa de conversão"
+    description: "Conversion rate"
   }];
   return <section className="py-20 bg-cream">
       <div className="container mx-auto px-6">
@@ -41,7 +41,7 @@ With a background in fashion branding, digital storytelling, and performance-bas
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-coral rounded-full mr-3"></div>
-                    Email Marketing & Automação
+                    Email Marketing & Automation
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-coral rounded-full mr-3"></div>

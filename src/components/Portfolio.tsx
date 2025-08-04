@@ -72,9 +72,9 @@ const Portfolio = () => {
                 <div className={`lg:flex ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                   {/* Image Section */}
                   <div className="lg:w-1/2">
-                    <div className="relative h-64 lg:h-full min-h-[400px]">
-                      <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-coral/20 to-transparent mx-0 my-0 px-0"></div>
+                    <div className="relative h-64 lg:h-full min-h-[400px] flex items-center justify-center">
+                      <img src={project.image} alt={project.title} className="w-full h-full object-contain bg-gray-50" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-coral/10 to-transparent mx-0 my-0 px-0"></div>
                     </div>
                   </div>
 
