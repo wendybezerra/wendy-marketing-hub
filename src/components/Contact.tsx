@@ -8,7 +8,7 @@ const Contact = () => {
     icon: <Mail className="h-6 w-6" />,
     title: "Email",
     content: "wendy@marketing.com",
-    link: "mailto:wendymesq@gmail.com"
+    link: "mailto:wendy@marketing.com"
   }, {
     icon: <Phone className="h-6 w-6" />,
     title: "Telefone",
@@ -17,7 +17,7 @@ const Contact = () => {
   }, {
     icon: <MapPin className="h-6 w-6" />,
     title: "Localização",
-    content: "Canada",
+    content: "São Paulo, SP",
     link: null
   }];
   const socialLinks = [{
