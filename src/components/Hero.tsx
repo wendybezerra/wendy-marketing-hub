@@ -42,9 +42,8 @@ const Hero = () => {
             </Button>
             <Button 
               onClick={scrollToContact}
-              variant="outline" 
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-coral font-semibold text-lg px-8 py-6 rounded-full transition-all duration-300"
+              className="bg-coral text-white hover:bg-coral-light font-semibold text-lg px-8 py-6 rounded-full transition-all duration-300 hover:shadow-glow"
             >
               <Mail className="mr-2 h-5 w-5" />
               Contact
