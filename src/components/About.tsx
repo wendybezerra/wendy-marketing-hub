@@ -32,9 +32,9 @@ const About = () => {
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <p className="text-lg text-gray-700 leading-relaxed">As a marketing strategist and content creator, I specialize in developing data-driven campaigns that not only reach but genuinely connect with audiences.
+              <p className="text-lg text-gray-700 leading-relaxed">As a marketing strategist, content creator, and Full Stack & AI Developer, I specialize in developing data-driven campaigns that not only reach but genuinely connect with audiences.
 
-With a background in fashion branding, digital storytelling, and performance-based email marketing, I transform content into strategic assets — from concept to conversion.</p>
+With a strong background in Full Stack and AI Development, combined with fashion branding, digital storytelling, and performance-based email marketing, I transform content into strategic assets — from concept to conversion.</p>
               <p className="text-lg text-gray-700 leading-relaxed">With a strong foundation in branding, social media performance, and community engagement, I’ve successfully led digital campaigns that delivered outstanding results — all while maintaining a consistent and authentic brand identity.</p>
               <div className="pt-4">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Specialties:</h3>
