@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Instagram, ArrowUp } from "lucide-react";
+import { Mail, Linkedin, Github, ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
@@ -24,13 +24,13 @@ const Footer = () => {
                 results through data-driven strategies.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="p-2 bg-gray-800 rounded-lg hover:bg-coral transition-colors">
+                <a href="https://www.linkedin.com/in/wendymbezerra/" target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-800 rounded-lg hover:bg-coral transition-colors">
                   <Linkedin className="h-5 w-5" />
                 </a>
-                <a href="#" className="p-2 bg-gray-800 rounded-lg hover:bg-coral transition-colors">
-                  <Instagram className="h-5 w-5" />
+                <a href="https://github.com/wendybezerra" target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-800 rounded-lg hover:bg-coral transition-colors">
+                  <Github className="h-5 w-5" />
                 </a>
-                <a href="mailto:wendy@marketing.com" className="p-2 bg-gray-800 rounded-lg hover:bg-coral transition-colors">
+                <a href="mailto:wendybezerra.dev@gmail.com" className="p-2 bg-gray-800 rounded-lg hover:bg-coral transition-colors">
                   <Mail className="h-5 w-5" />
                 </a>
               </div>
@@ -68,15 +68,15 @@ const Footer = () => {
               <div className="space-y-3 text-gray-300">
                 <p>
                   <span className="font-medium">Email:</span><br />
-                  wendy@marketing.com
+                  wendybezerra.dev@gmail.com
                 </p>
                 <p>
                   <span className="font-medium">Phone:</span><br />
-                  +55 (11) 99999-9999
+                  +1 (306) 850-5992
                 </p>
                 <p>
                   <span className="font-medium">Location:</span><br />
-                  São Paulo, SP
+                  Saskatoon, SK - Canada
                 </p>
               </div>
             </div>
