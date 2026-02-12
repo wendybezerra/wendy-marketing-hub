@@ -2,18 +2,18 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Linkedin, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-react";
 
 const Contact = () => {
   const contactInfo = [
-    { icon: <Mail className="h-6 w-6" />, title: "Email", content: "wendy@marketing.com", link: "mailto:wendy@marketing.com" },
-    { icon: <Phone className="h-6 w-6" />, title: "Phone", content: "+55 (11) 99999-9999", link: "tel:+5511999999999" },
-    { icon: <MapPin className="h-6 w-6" />, title: "Location", content: "São Paulo, SP", link: null },
+    { icon: <Mail className="h-6 w-6" />, title: "Email", content: "wendybezerra.dev@gmail.com", link: "mailto:wendybezerra.dev@gmail.com" },
+    { icon: <Phone className="h-6 w-6" />, title: "Phone", content: "+1 (306) 850-5992", link: "tel:+13068505992" },
+    { icon: <MapPin className="h-6 w-6" />, title: "Location", content: "Saskatoon, SK - Canada", link: null },
   ];
 
   const socialLinks = [
-    { icon: <Linkedin className="h-5 w-5" />, name: "LinkedIn", link: "#" },
-    { icon: <Instagram className="h-5 w-5" />, name: "Instagram", link: "#" },
+    { icon: <Linkedin className="h-5 w-5" />, name: "LinkedIn", link: "https://www.linkedin.com/in/wendymbezerra/" },
+    { icon: <Github className="h-5 w-5" />, name: "GitHub", link: "https://github.com/wendybezerra" },
   ];
 
   return (
