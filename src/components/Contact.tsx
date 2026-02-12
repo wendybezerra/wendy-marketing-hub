@@ -77,10 +77,15 @@ const Contact = () => {
                   Informações de Contato
                 </h3>
                 <div className="space-y-4">
-                  {contactInfo.map((info, index) => <div key={index} className="flex items-center space-x-4">
-                      
-                      
-                    </div>)}
+                  {contactInfo.map((info, index) => (
+                    <a key={index} href={info.link || undefined} className="flex items-center space-x-4 text-white/90 hover:text-white transition-colors">
+                      <div className="p-3 bg-white/20 rounded-lg">{info.icon}</div>
+                      <div>
+                        <p className="text-sm text-white/70">{info.title}</p>
+                        <p className="font-medium">{info.content}</p>
+                      </div>
+                    </a>
+                  ))}
                 </div>
               </div>
 
@@ -89,7 +94,11 @@ const Contact = () => {
                   Redes Sociais
                 </h3>
                 <div className="flex space-x-4">
-                  {socialLinks.map((social, index) => {})}
+                  {socialLinks.map((social, index) => (
+                    <a key={index} href={social.link} className="p-3 bg-white/20 rounded-lg text-white hover:bg-white/30 transition-colors">
+                      {social.icon}
+                    </a>
+                  ))}
                 </div>
               </div>
 
