@@ -27,22 +27,22 @@ const VideoShowcase = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Campaign Videos
             </h2>
             <div className="w-24 h-1 bg-gradient-accent mx-auto mb-8"></div>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               All advertising content — including videos, visuals, and campaign creatives — was fully developed and executed by Wendy Bezerra.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {videos.map((video, index) => (
-              <Card key={index} className="overflow-hidden shadow-card hover:shadow-glow transition-all duration-500 group">
-                <div className="p-4 pb-2">
-                  <p className="text-sm text-muted-foreground italic leading-relaxed">{video.copy}</p>
+              <Card key={index} className="overflow-hidden shadow-card hover:shadow-glow transition-all duration-500 group flex flex-col">
+                <div className="px-5 pt-5 pb-2">
+                  <p className="text-xs text-muted-foreground italic leading-relaxed">{video.copy}</p>
                 </div>
-                <div className="aspect-[9/16] bg-muted">
+                <div className="aspect-[4/5] bg-muted mx-3 rounded-lg overflow-hidden">
                   <video
                     src={video.src}
                     controls
@@ -51,8 +51,8 @@ const VideoShowcase = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-2">{video.title}</h3>
+                <div className="p-5 flex-1">
+                  <h3 className="text-lg font-bold text-foreground mb-2">{video.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{video.description}</p>
                 </div>
               </Card>
