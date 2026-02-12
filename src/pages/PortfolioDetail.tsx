@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ImageLightbox from "@/components/ImageLightbox";
 
 const PortfolioDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -60,7 +61,7 @@ const PortfolioDetail = () => {
             <div className="lg:col-span-3 space-y-8">
               {/* Main image */}
               <div className="rounded-xl overflow-hidden shadow-card">
-                <img
+                <ImageLightbox
                   src={project.image}
                   alt={project.title}
                   className="w-full h-auto object-contain bg-muted"
@@ -88,7 +89,7 @@ const PortfolioDetail = () => {
                         key={idx}
                         className="rounded-xl overflow-hidden shadow-card"
                       >
-                        <img
+                        <ImageLightbox
                           src={img}
                           alt={`${project.title} - image ${idx + 1}`}
                           className="w-full h-auto object-contain bg-muted"
