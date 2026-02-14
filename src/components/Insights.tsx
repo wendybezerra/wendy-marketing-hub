@@ -10,7 +10,7 @@ const Insights = () => {
       stats: [
         { icon: <Eye className="h-5 w-5" />, value: "20,553", label: "Views" },
         { icon: <MousePointerClick className="h-5 w-5" />, value: "570", label: "Interactions" },
-        { icon: <UserCheck className="h-5 w-5" />, value: "5", label: "Profile Activity" },
+        { icon: <UserCheck className="h-5 w-5" />, value: "678", label: "Profile Activity" },
       ],
       adViews: "36,664",
       adGoal: "1,373 Profile Visits",
