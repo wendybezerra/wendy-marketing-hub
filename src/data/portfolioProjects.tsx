@@ -144,8 +144,11 @@ export const portfolioProjects: PortfolioProject[] = [
     galleryImages: [
       "/lovable-uploads/maiza-logo.png",
       "/lovable-uploads/maiza-moodboard.png",
+      "/lovable-uploads/maiza-brand-guidelines.png",
       "/lovable-uploads/maiza-business-card.png",
       "/lovable-uploads/maiza-business-card-2.png",
+      "/lovable-uploads/maiza-letterhead.png",
+      "/lovable-uploads/maiza-story.png",
       "/lovable-uploads/maiza-post-1.png",
       "/lovable-uploads/maiza-post-2.png",
       "/lovable-uploads/maiza-post-3.png",
