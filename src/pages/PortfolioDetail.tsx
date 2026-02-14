@@ -65,6 +65,8 @@ const PortfolioDetail = () => {
                   src={project.image}
                   alt={project.title}
                   className="w-full h-auto object-contain bg-muted"
+                  gallery={project.galleryImages}
+                  galleryAlt={project.title}
                 />
               </div>
 
@@ -93,6 +95,8 @@ const PortfolioDetail = () => {
                           src={img}
                           alt={`${project.title} - image ${idx + 1}`}
                           className="w-full h-auto object-contain bg-muted"
+                          gallery={project.galleryImages}
+                          galleryAlt={project.title}
                         />
                       </div>
                     ))}
