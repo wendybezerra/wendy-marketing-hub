@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import VideoStorytelling from "@/components/VideoStorytelling";
 import Portfolio from "@/components/Portfolio";
 import VideoShowcase from "@/components/VideoShowcase";
 import Insights from "@/components/Insights";
@@ -13,6 +14,7 @@ const Index = () => {
       <Navigation />
       <Hero />
       <About />
+      <VideoStorytelling />
       <Portfolio />
       <VideoShowcase />
       <Insights />
