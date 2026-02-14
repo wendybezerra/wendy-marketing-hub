@@ -129,7 +129,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Developed a full branding package for a psychologist, including logo design, business cards, social media posts, and moodboarding — building a cohesive and professional visual identity.",
     fullDescription:
       "This project involved creating a complete visual identity for Maiza Dias, a psychologist seeking to establish a professional and welcoming brand presence. The branding process began with moodboarding to define the visual direction — incorporating soft, warm tones of rose, lavender, and cream to evoke feelings of trust, care, and emotional safety.\n\nThe logo features a butterfly-brain symbol, representing transformation, mental health, and personal growth. Alternative logo versions were created for different applications and contexts.\n\nThe brand was extended into business card designs showcasing both the logo and contact information in a clean, elegant layout. Social media content was also developed for Instagram, featuring motivational and educational posts aligned with the brand's visual language and tone of voice.\n\nThe color palette (#FFFCF9, #D6CCE1, #A7727D, #684235, #BD655E) was carefully selected to communicate warmth, professionalism, and approachability — key attributes for a psychology practice.",
-    platform: "Canva / Adobe Illustrator",
+    platform: "Canva / Adobe Illustrator / Figma",
     target: "Establish professional visual identity",
     category: "branding",
     highlights: [
