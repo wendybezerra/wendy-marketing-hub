@@ -1,4 +1,4 @@
-import { Mail, TrendingUp, Users, Heart } from "lucide-react";
+import { Mail, TrendingUp, Users, Heart, Palette } from "lucide-react";
 import { ReactNode } from "react";
 
 export interface PortfolioProject {
@@ -10,7 +10,7 @@ export interface PortfolioProject {
   fullDescription?: string;
   platform: string;
   target: string;
-  category: "email-marketing" | "social-media" | "volunteer";
+  category: "email-marketing" | "social-media" | "volunteer" | "branding";
   results?: { metric: string; label: string }[];
   highlights: string[];
   image: string;
@@ -119,5 +119,38 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     icon: <Heart className="h-6 w-6" />,
     note: "Due to the nature of volunteer collaborations, the work showcased emphasizes strategic thinking, content architecture, and brand stewardship rather than performance metrics.",
+  },
+  {
+    id: 5,
+    slug: "psychologist-branding",
+    title: "Psychologist Branding",
+    subtitle: "Complete Visual Identity for Maiza Dias Psychologist",
+    description:
+      "Developed a full branding package for a psychologist, including logo design, business cards, social media posts, and moodboarding — building a cohesive and professional visual identity.",
+    fullDescription:
+      "This project involved creating a complete visual identity for Maiza Dias, a psychologist seeking to establish a professional and welcoming brand presence. The branding process began with moodboarding to define the visual direction — incorporating soft, warm tones of rose, lavender, and cream to evoke feelings of trust, care, and emotional safety.\n\nThe logo features a butterfly-brain symbol, representing transformation, mental health, and personal growth. Alternative logo versions were created for different applications and contexts.\n\nThe brand was extended into business card designs showcasing both the logo and contact information in a clean, elegant layout. Social media content was also developed for Instagram, featuring motivational and educational posts aligned with the brand's visual language and tone of voice.\n\nThe color palette (#FFFCF9, #D6CCE1, #A7727D, #684235, #BD655E) was carefully selected to communicate warmth, professionalism, and approachability — key attributes for a psychology practice.",
+    platform: "Canva / Adobe Illustrator",
+    target: "Establish professional visual identity",
+    category: "branding",
+    highlights: [
+      "Logo design with butterfly-brain concept",
+      "Alternative logo versions for different contexts",
+      "Business card design (front and back)",
+      "Social media content for Instagram",
+      "Moodboarding and color palette definition",
+      "Cohesive brand identity across all touchpoints",
+    ],
+    image: "/lovable-uploads/maiza-logo.png",
+    galleryImages: [
+      "/lovable-uploads/maiza-logo.png",
+      "/lovable-uploads/maiza-moodboard.png",
+      "/lovable-uploads/maiza-business-card.png",
+      "/lovable-uploads/maiza-business-card-2.png",
+      "/lovable-uploads/maiza-post-1.png",
+      "/lovable-uploads/maiza-post-2.png",
+      "/lovable-uploads/maiza-post-3.png",
+    ],
+    icon: <Palette className="h-6 w-6" />,
+    note: "This project was developed as a freelance branding service, showcasing the full creative process from moodboarding to final deliverables.",
   },
 ];
