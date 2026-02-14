@@ -123,3 +123,7 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+.lightbox-dialog > button:last-of-type:not([title="Close"]) {
+  display: none;
+}
