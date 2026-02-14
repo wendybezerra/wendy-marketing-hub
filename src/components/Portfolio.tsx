@@ -23,11 +23,11 @@ const Portfolio = () => {
             {portfolioProjects.map((project) => (
               <Link key={project.id} to={`/portfolio/${project.slug}`}>
                 <Card className="overflow-hidden shadow-card hover:shadow-glow transition-all duration-500 group h-full">
-                  <div className="relative h-56 overflow-hidden">
+                  <div className="relative h-64 overflow-hidden">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-contain bg-muted group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                     <div className="absolute bottom-4 left-4">
