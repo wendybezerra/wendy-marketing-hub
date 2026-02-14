@@ -1,7 +1,7 @@
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
-import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useRef, useCallback } from "react";
+import { ChevronLeft, ChevronRight, ZoomIn, ZoomOut, RotateCcw } from "lucide-react";
 
 interface ImageLightboxProps {
   src: string;
@@ -14,24 +14,95 @@ interface ImageLightboxProps {
 const ImageLightbox = ({ src, alt, className, gallery, galleryAlt }: ImageLightboxProps) => {
   const [open, setOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [zoom, setZoom] = useState(1);
+  const [pan, setPan] = useState({ x: 0, y: 0 });
+  const [isDragging, setIsDragging] = useState(false);
+  const dragStart = useRef({ x: 0, y: 0 });
+  const panStart = useRef({ x: 0, y: 0 });
 
   const images = gallery && gallery.length > 0 ? gallery : [src];
   const startIndex = gallery ? gallery.indexOf(src) : 0;
 
   const handleOpen = () => {
     setCurrentIndex(startIndex >= 0 ? startIndex : 0);
+    resetZoom();
     setOpen(true);
+  };
+
+  const resetZoom = () => {
+    setZoom(1);
+    setPan({ x: 0, y: 0 });
+  };
+
+  const handleZoomIn = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setZoom((z) => Math.min(z + 0.5, 4));
+  };
+
+  const handleZoomOut = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setZoom((z) => {
+      const newZoom = Math.max(z - 0.5, 1);
+      if (newZoom === 1) setPan({ x: 0, y: 0 });
+      return newZoom;
+    });
+  };
+
+  const handleReset = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    resetZoom();
   };
 
   const prev = (e: React.MouseEvent) => {
     e.stopPropagation();
+    resetZoom();
     setCurrentIndex((i) => (i - 1 + images.length) % images.length);
   };
 
   const next = (e: React.MouseEvent) => {
     e.stopPropagation();
+    resetZoom();
     setCurrentIndex((i) => (i + 1) % images.length);
   };
+
+  const handleMouseDown = useCallback((e: React.MouseEvent) => {
+    if (zoom <= 1) return;
+    e.preventDefault();
+    setIsDragging(true);
+    dragStart.current = { x: e.clientX, y: e.clientY };
+    panStart.current = { ...pan };
+  }, [zoom, pan]);
+
+  const handleMouseMove = useCallback((e: React.MouseEvent) => {
+    if (!isDragging || zoom <= 1) return;
+    setPan({
+      x: panStart.current.x + (e.clientX - dragStart.current.x),
+      y: panStart.current.y + (e.clientY - dragStart.current.y),
+    });
+  }, [isDragging, zoom]);
+
+  const handleMouseUp = useCallback(() => {
+    setIsDragging(false);
+  }, []);
+
+  const handleWheel = useCallback((e: React.WheelEvent) => {
+    e.stopPropagation();
+    const delta = e.deltaY > 0 ? -0.25 : 0.25;
+    setZoom((z) => {
+      const newZoom = Math.max(1, Math.min(z + delta, 4));
+      if (newZoom === 1) setPan({ x: 0, y: 0 });
+      return newZoom;
+    });
+  }, []);
+
+  const handleDoubleClick = useCallback((e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (zoom > 1) {
+      resetZoom();
+    } else {
+      setZoom(2.5);
+    }
+  }, [zoom]);
 
   return (
     <>
@@ -41,10 +112,33 @@ const ImageLightbox = ({ src, alt, className, gallery, galleryAlt }: ImageLightb
         className={`${className} cursor-zoom-in`}
         onClick={handleOpen}
       />
-      <Dialog open={open} onOpenChange={setOpen}>
+      <Dialog open={open} onOpenChange={(v) => { setOpen(v); if (!v) resetZoom(); }}>
         <DialogContent className="max-w-[95vw] max-h-[95vh] p-2 bg-black/95 border-none flex flex-col items-center justify-center">
           <VisuallyHidden><DialogTitle>{galleryAlt || alt}</DialogTitle></VisuallyHidden>
-          <div className="relative flex items-center justify-center w-full h-full">
+          
+          {/* Zoom controls */}
+          <div className="absolute top-4 right-12 z-20 flex items-center gap-1">
+            <button onClick={handleZoomOut} className="p-2 rounded-full bg-white/20 hover:bg-white/40 transition-colors text-white" title="Zoom out">
+              <ZoomOut className="h-5 w-5" />
+            </button>
+            <span className="text-white/70 text-xs min-w-[3rem] text-center">{Math.round(zoom * 100)}%</span>
+            <button onClick={handleZoomIn} className="p-2 rounded-full bg-white/20 hover:bg-white/40 transition-colors text-white" title="Zoom in">
+              <ZoomIn className="h-5 w-5" />
+            </button>
+            {zoom > 1 && (
+              <button onClick={handleReset} className="p-2 rounded-full bg-white/20 hover:bg-white/40 transition-colors text-white ml-1" title="Reset">
+                <RotateCcw className="h-4 w-4" />
+              </button>
+            )}
+          </div>
+
+          <div
+            className="relative flex items-center justify-center w-full h-full overflow-hidden"
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUp}
+            onMouseLeave={handleMouseUp}
+            onWheel={handleWheel}
+          >
             {images.length > 1 && (
               <button
                 onClick={prev}
@@ -56,7 +150,14 @@ const ImageLightbox = ({ src, alt, className, gallery, galleryAlt }: ImageLightb
             <img
               src={images[currentIndex]}
               alt={`${galleryAlt || alt} - ${currentIndex + 1}`}
-              className="max-w-full max-h-[88vh] object-contain rounded-lg"
+              className="max-w-full max-h-[85vh] object-contain rounded-lg transition-transform duration-200"
+              style={{
+                transform: `scale(${zoom}) translate(${pan.x / zoom}px, ${pan.y / zoom}px)`,
+                cursor: zoom > 1 ? (isDragging ? "grabbing" : "grab") : "zoom-in",
+              }}
+              onMouseDown={handleMouseDown}
+              onDoubleClick={handleDoubleClick}
+              draggable={false}
             />
             {images.length > 1 && (
               <button
