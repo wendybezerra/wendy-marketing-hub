@@ -1,4 +1,4 @@
-import { Mail, TrendingUp, Users, Heart, Palette, Calculator } from "lucide-react";
+import { Mail, TrendingUp, Users, Heart, Palette, Calculator, Smartphone } from "lucide-react";
 import { ReactNode } from "react";
 
 export interface PortfolioProject {
@@ -10,7 +10,7 @@ export interface PortfolioProject {
   fullDescription?: string;
   platform: string;
   target: string;
-  category: "email-marketing" | "social-media" | "volunteer" | "branding";
+  category: "email-marketing" | "social-media" | "volunteer" | "branding" | "ui-ux";
   results?: { metric: string; label: string }[];
   highlights: string[];
   image: string;
@@ -184,5 +184,33 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     icon: <Calculator className="h-6 w-6" />,
     note: "This project was developed as a branding case study, showcasing the full creative process from moodboarding to final deliverables for the financial services sector.",
+  },
+  {
+    id: 7,
+    slug: "routine-care-ui-ux",
+    title: "Routine Care — Health App",
+    subtitle: "UI/UX Design for a Mobile Health Application",
+    description:
+      "Designed the complete UI/UX for Routine Care, a health appointment management app, as part of an AI Developer program. Responsible for the app concept, user flows, visual design, and interactive prototyping.",
+    fullDescription:
+      "Routine Care is a mobile health application designed to simplify appointment scheduling and patient management. The project was developed collaboratively during an AI Developer program, where I was responsible for ideating the app concept and designing the entire UI/UX experience.\n\nThe design process included user research, wireframing, visual design, and interactive prototyping. The interface follows a clean, modern aesthetic with a calming teal color palette — chosen to convey trust, health, and professionalism.\n\nKey screens include onboarding flows, login and registration pages, appointment scheduling, and notification systems. The UI Kit was built with consistency in mind, featuring reusable components, a defined color system, typography scale, and spacing guidelines.\n\nThe goal was to create an intuitive, accessible experience that helps users stay on top of their healthcare routine without friction.",
+    platform: "Figma",
+    target: "Create an intuitive mobile health experience",
+    category: "ui-ux",
+    highlights: [
+      "Complete app concept and ideation",
+      "User flow mapping and wireframing",
+      "Onboarding, login, and registration screens",
+      "UI Kit with reusable components and design tokens",
+      "Calming teal color palette for healthcare context",
+      "Interactive prototyping in Figma",
+    ],
+    image: "/lovable-uploads/routinecare-onboarding.png",
+    galleryImages: [
+      "/lovable-uploads/routinecare-onboarding.png",
+      "/lovable-uploads/routinecare-uikit.png",
+    ],
+    icon: <Smartphone className="h-6 w-6" />,
+    note: "This project was developed as part of an AI Developer program. I was responsible for the app concept, UI/UX design, user flows, and visual identity.",
   },
 ];
