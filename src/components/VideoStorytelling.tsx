@@ -52,7 +52,7 @@ const VideoStorytelling = () => {
                 className="relative rounded-[2rem] overflow-hidden shadow-card hover:shadow-glow transition-all duration-500 bg-muted aspect-[9/16]"
               >
                 <video
-                  src={video.src}
+                  src={`${video.src}#t=0.001`}
                   controls
                   playsInline
                   preload="metadata"
