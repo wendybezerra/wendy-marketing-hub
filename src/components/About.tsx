@@ -38,7 +38,7 @@ const About = () => {
                   <img
                     src="/lovable-uploads/wendy-profile.png"
                     alt="Wendy Bezerra"
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-cover object-center scale-110"
                   />
                 </div>
                 <div className="absolute -bottom-3 -right-3 w-20 h-20 bg-coral rounded-xl flex items-center justify-center shadow-lg">
