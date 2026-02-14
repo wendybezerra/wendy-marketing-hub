@@ -10,7 +10,7 @@ export interface PortfolioProject {
   fullDescription?: string;
   platform: string;
   target: string;
-  category: "email-marketing" | "social-media" | "volunteer";
+  category: "email-marketing" | "social-media" | "volunteer" | "branding";
   results?: { metric: string; label: string }[];
   highlights: string[];
   image: string;
