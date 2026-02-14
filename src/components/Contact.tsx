@@ -74,7 +74,7 @@ const Contact = () => {
               <div className="p-6 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
                 <h4 className="font-semibold text-white mb-2">Availability</h4>
                 <p className="text-white/80 text-sm">
-                  Monday to Friday: 9am – 6pm<br />
+                  Monday to Friday: 9am to 6pm<br />
                   Response within 24 hours
                 </p>
               </div>

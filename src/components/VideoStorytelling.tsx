@@ -25,7 +25,7 @@ const VideoStorytelling = () => {
             <div className="w-24 h-1 bg-gradient-accent mx-auto mb-8"></div>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               As co-producer of these video campaigns, I was responsible for the full creative
-              process — from choosing locations and styling wardrobe to crafting the narrative
+              process: from choosing locations and styling wardrobe to crafting the narrative
               storytelling, editing, final post-production, and curating the perfect soundtrack
               for each piece.
             </p>

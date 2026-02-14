@@ -22,7 +22,7 @@ const About = () => {
     label: "Click-through",
     description: "Conversion rate"
   }];
-  return <section className="py-20 bg-cream">
+  return <section id="about" className="py-20 bg-cream">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -50,8 +50,8 @@ const About = () => {
             <div className="lg:col-span-3 space-y-6">
               <p className="text-lg text-gray-700 leading-relaxed">As a marketing strategist, content creator, and Full Stack & AI Developer, I specialize in developing data-driven campaigns that not only reach but genuinely connect with audiences.
 
-With a strong background in Full Stack and AI Development, combined with fashion branding, digital storytelling, and performance-based email marketing, I transform content into strategic assets — from concept to conversion.</p>
-              <p className="text-lg text-gray-700 leading-relaxed">With a strong foundation in branding, social media performance, and community engagement, I've successfully led digital campaigns that delivered outstanding results — all while maintaining a consistent and authentic brand identity.</p>
+With a strong background in Full Stack and AI Development, combined with fashion branding, digital storytelling, and performance-based email marketing, I transform content into strategic assets, from concept to conversion.</p>
+              <p className="text-lg text-gray-700 leading-relaxed">With a strong foundation in branding, social media performance, and community engagement, I've successfully led digital campaigns that delivered outstanding results, all while maintaining a consistent and authentic brand identity.</p>
               <div className="pt-4">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Specialties:</h3>
                 <ul className="space-y-2 text-gray-700">
