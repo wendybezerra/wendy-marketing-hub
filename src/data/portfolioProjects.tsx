@@ -1,4 +1,4 @@
-import { Mail, TrendingUp, Users, Heart } from "lucide-react";
+import { Mail, TrendingUp, Users, Heart, Palette } from "lucide-react";
 import { ReactNode } from "react";
 
 export interface PortfolioProject {
