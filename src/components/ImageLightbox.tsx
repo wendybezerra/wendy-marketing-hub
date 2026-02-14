@@ -113,16 +113,16 @@ const ImageLightbox = ({ src, alt, className, gallery, galleryAlt }: ImageLightb
         onClick={handleOpen}
       />
       <Dialog open={open} onOpenChange={(v) => { setOpen(v); if (!v) resetZoom(); }}>
-        <DialogContent className="max-w-[95vw] max-h-[95vh] p-2 bg-black/95 border-none flex flex-col items-center justify-center [&>button]:hidden">
+        <DialogContent className="max-w-[95vw] max-h-[95vh] p-2 bg-black/95 border-none flex flex-col items-center justify-center lightbox-dialog">
           <VisuallyHidden><DialogTitle>{galleryAlt || alt}</DialogTitle></VisuallyHidden>
           
           {/* Close button */}
           <button
             onClick={() => setOpen(false)}
-            className="absolute top-3 right-3 z-30 p-2.5 rounded-full bg-white/30 hover:bg-white/50 transition-colors text-white backdrop-blur-sm"
+            className="absolute top-4 right-4 z-50 p-3 rounded-full bg-white/40 hover:bg-white/60 transition-colors text-white backdrop-blur-md shadow-lg border border-white/30"
             title="Close"
           >
-            <X className="h-6 w-6" />
+            <X className="h-7 w-7 drop-shadow-md" />
           </button>
 
           {/* Zoom controls */}
