@@ -209,6 +209,9 @@ export const portfolioProjects: PortfolioProject[] = [
     galleryImages: [
       "/lovable-uploads/routinecare-onboarding.png",
       "/lovable-uploads/routinecare-uikit.png",
+      "/lovable-uploads/routinecare-dashboard.png",
+      "/lovable-uploads/routinecare-scheduling.png",
+      "/lovable-uploads/routinecare-profile.png",
     ],
     icon: <Smartphone className="h-6 w-6" />,
     note: "This project was developed as part of an AI Developer program. I was responsible for the app concept, UI/UX design, user flows, and visual identity.",
