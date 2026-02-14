@@ -31,23 +31,24 @@ const About = () => {
           </div>
 
           {/* Photo + Text */}
-          <div className="grid lg:grid-cols-5 gap-12 items-center mb-16">
-            <div className="lg:col-span-2 flex justify-center">
-              <div className="relative">
-                <div className="w-72 h-72 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-card border-4 border-white">
-                  <img
-                    src="/lovable-uploads/wendy-profile.png"
-                    alt="Wendy Bezerra"
-                    className="w-full h-full object-cover object-top"
-                  />
-                </div>
-                <div className="absolute -bottom-3 -right-3 w-20 h-20 bg-coral rounded-xl flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-xs text-center leading-tight">Full Stack<br/>& AI Dev</span>
-                </div>
+          <div className="flex flex-col items-center mb-12">
+            <div className="relative mb-10">
+              <div className="w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden shadow-card border-4 border-white">
+                <img
+                  src="/lovable-uploads/wendy-profile.png"
+                  alt="Wendy Bezerra"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-coral rounded-full px-4 py-1.5 shadow-lg">
+                <span className="text-white font-bold text-xs text-center leading-tight whitespace-nowrap">Full Stack & AI Dev</span>
               </div>
             </div>
+          </div>
 
-            <div className="lg:col-span-3 space-y-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+
+            <div className="space-y-6">
               <p className="text-lg text-gray-700 leading-relaxed">As a marketing strategist, content creator, and Full Stack & AI Developer, I specialize in developing data-driven campaigns that not only reach but genuinely connect with audiences.
 
 With a strong background in Full Stack and AI Development, combined with fashion branding, digital storytelling, and performance-based email marketing, I transform content into strategic assets — from concept to conversion.</p>
