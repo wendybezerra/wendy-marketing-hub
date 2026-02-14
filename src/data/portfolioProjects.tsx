@@ -205,8 +205,9 @@ export const portfolioProjects: PortfolioProject[] = [
       "Calming teal color palette for healthcare context",
       "Interactive prototyping in Figma",
     ],
-    image: "/lovable-uploads/routinecare-onboarding.png",
+    image: "/lovable-uploads/routinecare-logo.png",
     galleryImages: [
+      "/lovable-uploads/routinecare-logo.png",
       "/lovable-uploads/routinecare-onboarding.png",
       "/lovable-uploads/routinecare-uikit.png",
       "/lovable-uploads/routinecare-dashboard.png",
