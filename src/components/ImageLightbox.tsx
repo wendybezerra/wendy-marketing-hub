@@ -1,7 +1,7 @@
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { useState, useRef, useCallback } from "react";
-import { ChevronLeft, ChevronRight, ZoomIn, ZoomOut, RotateCcw } from "lucide-react";
+import { ChevronLeft, ChevronRight, ZoomIn, ZoomOut, RotateCcw, X } from "lucide-react";
 
 interface ImageLightboxProps {
   src: string;
@@ -113,20 +113,29 @@ const ImageLightbox = ({ src, alt, className, gallery, galleryAlt }: ImageLightb
         onClick={handleOpen}
       />
       <Dialog open={open} onOpenChange={(v) => { setOpen(v); if (!v) resetZoom(); }}>
-        <DialogContent className="max-w-[95vw] max-h-[95vh] p-2 bg-black/95 border-none flex flex-col items-center justify-center">
+        <DialogContent className="max-w-[95vw] max-h-[95vh] p-2 bg-black/95 border-none flex flex-col items-center justify-center [&>button]:hidden">
           <VisuallyHidden><DialogTitle>{galleryAlt || alt}</DialogTitle></VisuallyHidden>
           
+          {/* Close button */}
+          <button
+            onClick={() => setOpen(false)}
+            className="absolute top-3 right-3 z-30 p-2.5 rounded-full bg-white/30 hover:bg-white/50 transition-colors text-white backdrop-blur-sm"
+            title="Close"
+          >
+            <X className="h-6 w-6" />
+          </button>
+
           {/* Zoom controls */}
-          <div className="absolute top-4 right-12 z-20 flex items-center gap-1">
-            <button onClick={handleZoomOut} className="p-2 rounded-full bg-white/20 hover:bg-white/40 transition-colors text-white" title="Zoom out">
+          <div className="absolute top-3 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2 bg-black/60 backdrop-blur-sm rounded-full px-3 py-1.5">
+            <button onClick={handleZoomOut} className="p-1.5 rounded-full hover:bg-white/20 transition-colors text-white" title="Zoom out">
               <ZoomOut className="h-5 w-5" />
             </button>
-            <span className="text-white/70 text-xs min-w-[3rem] text-center">{Math.round(zoom * 100)}%</span>
-            <button onClick={handleZoomIn} className="p-2 rounded-full bg-white/20 hover:bg-white/40 transition-colors text-white" title="Zoom in">
+            <span className="text-white text-sm font-medium min-w-[3rem] text-center">{Math.round(zoom * 100)}%</span>
+            <button onClick={handleZoomIn} className="p-1.5 rounded-full hover:bg-white/20 transition-colors text-white" title="Zoom in">
               <ZoomIn className="h-5 w-5" />
             </button>
             {zoom > 1 && (
-              <button onClick={handleReset} className="p-2 rounded-full bg-white/20 hover:bg-white/40 transition-colors text-white ml-1" title="Reset">
+              <button onClick={handleReset} className="p-1.5 rounded-full hover:bg-white/20 transition-colors text-white" title="Reset">
                 <RotateCcw className="h-4 w-4" />
               </button>
             )}
@@ -142,9 +151,9 @@ const ImageLightbox = ({ src, alt, className, gallery, galleryAlt }: ImageLightb
             {images.length > 1 && (
               <button
                 onClick={prev}
-                className="absolute left-2 z-10 p-2 rounded-full bg-white/20 hover:bg-white/40 transition-colors text-white"
+                className="absolute left-2 z-10 p-3 rounded-full bg-black/50 hover:bg-black/70 transition-colors text-white backdrop-blur-sm border border-white/20"
               >
-                <ChevronLeft className="h-6 w-6" />
+                <ChevronLeft className="h-7 w-7" />
               </button>
             )}
             <img
@@ -162,14 +171,14 @@ const ImageLightbox = ({ src, alt, className, gallery, galleryAlt }: ImageLightb
             {images.length > 1 && (
               <button
                 onClick={next}
-                className="absolute right-2 z-10 p-2 rounded-full bg-white/20 hover:bg-white/40 transition-colors text-white"
+                className="absolute right-2 z-10 p-3 rounded-full bg-black/50 hover:bg-black/70 transition-colors text-white backdrop-blur-sm border border-white/20"
               >
-                <ChevronRight className="h-6 w-6" />
+                <ChevronRight className="h-7 w-7" />
               </button>
             )}
           </div>
           {images.length > 1 && (
-            <div className="text-center text-white/60 text-sm mt-1">
+            <div className="text-center text-white text-sm mt-1 bg-black/50 backdrop-blur-sm px-4 py-1 rounded-full font-medium">
               {currentIndex + 1} / {images.length}
             </div>
           )}

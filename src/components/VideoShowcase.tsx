@@ -12,7 +12,7 @@ const VideoShowcase = () => {
       src: "/videos/portfolio-video-2.mp4?v=4",
       title: "Social Media Content",
       copy: "Full creative direction and execution for Use Flô's seasonal collection launch.",
-      description: "With a strong foundation in branding, social media performance, and community engagement, I've successfully led digital campaigns that generated over 97,000 views, reached more than 76,000 unique users, and resulted in hundreds of organic followers—all while maintaining an authentic and consistent brand identity.",
+      description: "With a strong foundation in branding, social media performance, and community engagement, I've successfully led digital campaigns that generated over 97,000 views, reached more than 76,000 unique users, and resulted in hundreds of organic followers, all while maintaining an authentic and consistent brand identity.",
     },
     {
       src: "/videos/portfolio-video-3.mp4?v=4",
@@ -32,7 +32,7 @@ const VideoShowcase = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-accent mx-auto mb-8"></div>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              All advertising content — including videos, visuals, and campaign creatives — was fully developed and executed by Wendy Bezerra.
+              All advertising content, including videos, visuals, and campaign creatives, was fully developed and executed by Wendy Bezerra.
             </p>
           </div>
 
