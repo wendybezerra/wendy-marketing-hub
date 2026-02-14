@@ -89,12 +89,12 @@ const PortfolioDetail = () => {
                     {project.galleryImages.map((img, idx) => (
                       <div
                         key={idx}
-                        className="rounded-xl overflow-hidden shadow-card"
+                        className="rounded-xl overflow-hidden shadow-card bg-muted flex items-center justify-center aspect-[3/4]"
                       >
                         <ImageLightbox
                           src={img}
                           alt={`${project.title} - image ${idx + 1}`}
-                          className="w-full h-auto object-contain bg-muted"
+                          className="w-full h-full object-contain p-2"
                           gallery={project.galleryImages}
                           galleryAlt={project.title}
                         />
