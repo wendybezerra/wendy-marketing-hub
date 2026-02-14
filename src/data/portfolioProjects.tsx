@@ -209,7 +209,9 @@ export const portfolioProjects: PortfolioProject[] = [
     galleryImages: [
       "/lovable-uploads/routinecare-logo.png",
       "/lovable-uploads/routinecare-onboarding.png",
-      "/lovable-uploads/routinecare-uikit.png",
+      "/lovable-uploads/routinecare-login.png",
+      "/lovable-uploads/routinecare-register.png",
+      "/lovable-uploads/routinecare-onboarding2.png",
       "/lovable-uploads/routinecare-dashboard.png",
       "/lovable-uploads/routinecare-scheduling.png",
       "/lovable-uploads/routinecare-profile.png",
