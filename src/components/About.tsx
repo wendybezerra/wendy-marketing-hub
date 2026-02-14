@@ -63,14 +63,18 @@ With a strong background in Full Stack and AI Development, combined with fashion
                     <div className="w-2 h-2 bg-coral rounded-full mr-3"></div>
                     Social Media Strategy
                   </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-coral rounded-full mr-3"></div>
-                    Content Creation & Branding
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-coral rounded-full mr-3"></div>
-                    Performance Analytics
-                  </li>
+                   <li className="flex items-center">
+                     <div className="w-2 h-2 bg-coral rounded-full mr-3"></div>
+                     Content Creation & Branding
+                   </li>
+                   <li className="flex items-center">
+                     <div className="w-2 h-2 bg-coral rounded-full mr-3"></div>
+                     UI/UX Design
+                   </li>
+                   <li className="flex items-center">
+                     <div className="w-2 h-2 bg-coral rounded-full mr-3"></div>
+                     Performance Analytics
+                   </li>
                 </ul>
               </div>
             </div>
