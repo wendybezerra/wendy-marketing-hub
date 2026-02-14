@@ -3,19 +3,19 @@ import { Card } from "@/components/ui/card";
 const VideoShowcase = () => {
   const videos = [
     {
-      src: "/videos/portfolio-video-1.mp4?v=4",
+      src: "/videos/portfolio-video-1.mp4",
       title: "Brand Campaign Strategy",
       copy: "Full creative direction and execution for Use Flô's seasonal collection launch.",
       description: "Whether you're building a brand from scratch or scaling digital performance, I bring the strategic clarity and creative execution needed to achieve your goals. As a marketing strategist and content creator, I specialize in developing data-driven campaigns that not only reach but truly connect with audiences.",
     },
     {
-      src: "/videos/portfolio-video-2.mp4?v=4",
+      src: "/videos/portfolio-video-2.mp4",
       title: "Social Media Content",
       copy: "Full creative direction and execution for Use Flô's seasonal collection launch.",
       description: "With a strong foundation in branding, social media performance, and community engagement, I've successfully led digital campaigns that generated over 97,000 views, reached more than 76,000 unique users, and resulted in hundreds of organic followers, all while maintaining an authentic and consistent brand identity.",
     },
     {
-      src: "/videos/portfolio-video-3.mp4?v=4",
+      src: "/videos/portfolio-video-3.mp4",
       title: "Performance Ad Creative",
       copy: "Full creative direction and execution for Use Flô's seasonal collection launch.",
       description: "Data and insights were extracted from my own business social media account @USEFLOLOJA, where I successfully applied my knowledge in marketing strategy, ROI optimization, Google SEO, and Meta (Facebook and Instagram) Ads to achieve outstanding performance and measurable results.",
