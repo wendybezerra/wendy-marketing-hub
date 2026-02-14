@@ -44,7 +44,7 @@ const VideoShowcase = () => {
                 </div>
                 <div className="aspect-[4/5] bg-muted mx-3 rounded-lg overflow-hidden">
                   <video
-                    src={video.src}
+                    src={`${video.src}#t=0.001`}
                     controls
                     playsInline
                     preload="metadata"
