@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { BarChart3, Eye, MousePointerClick, UserCheck } from "lucide-react";
+import ImageLightbox from "@/components/ImageLightbox";
 
 const Insights = () => {
   const campaigns = [
@@ -27,6 +28,8 @@ const Insights = () => {
     },
   ];
 
+  const allImages = campaigns.map((c) => c.image);
+
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-6">
@@ -45,10 +48,12 @@ const Insights = () => {
             {campaigns.map((campaign, index) => (
               <Card key={index} className="overflow-hidden shadow-card hover:shadow-glow transition-all duration-500">
                 <div className="aspect-video bg-gray-50 flex items-center justify-center overflow-hidden">
-                  <img
+                  <ImageLightbox
                     src={campaign.image}
                     alt={campaign.title}
                     className="w-full h-full object-contain"
+                    gallery={allImages}
+                    galleryAlt="Data & Insights"
                   />
                 </div>
                 <div className="p-6">
