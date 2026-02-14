@@ -42,9 +42,9 @@ const ImageLightbox = ({ src, alt, className, gallery, galleryAlt }: ImageLightb
         onClick={handleOpen}
       />
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="max-w-[95vw] max-h-[95vh] p-2 bg-black/95 border-none">
+        <DialogContent className="max-w-[95vw] max-h-[95vh] p-2 bg-black/95 border-none flex flex-col items-center justify-center">
           <VisuallyHidden><DialogTitle>{galleryAlt || alt}</DialogTitle></VisuallyHidden>
-          <div className="relative flex items-center justify-center">
+          <div className="relative flex items-center justify-center w-full h-full">
             {images.length > 1 && (
               <button
                 onClick={prev}
@@ -56,7 +56,7 @@ const ImageLightbox = ({ src, alt, className, gallery, galleryAlt }: ImageLightb
             <img
               src={images[currentIndex]}
               alt={`${galleryAlt || alt} - ${currentIndex + 1}`}
-              className="w-full h-full object-contain max-h-[85vh] rounded-lg"
+              className="max-w-full max-h-[88vh] object-contain rounded-lg"
             />
             {images.length > 1 && (
               <button
