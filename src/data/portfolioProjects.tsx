@@ -1,4 +1,4 @@
-import { Mail, TrendingUp, Users, Heart, Palette } from "lucide-react";
+import { Mail, TrendingUp, Users, Heart, Palette, Calculator } from "lucide-react";
 import { ReactNode } from "react";
 
 export interface PortfolioProject {
@@ -152,5 +152,37 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     icon: <Palette className="h-6 w-6" />,
     note: "This project was developed as a freelance branding service, showcasing the full creative process from moodboarding to final deliverables.",
+  },
+  {
+    id: 6,
+    slug: "wb-accounting-branding",
+    title: "WB Accounting Branding",
+    subtitle: "Complete Visual Identity for WB Accounting",
+    description:
+      "Developed a full branding package for an accounting firm, including logo design, business cards, social media content, and moodboarding — building a trustworthy and professional visual identity.",
+    fullDescription:
+      "This project involved creating a complete visual identity for WB Accounting, a modern accounting firm seeking to establish a strong, trustworthy brand presence in the financial services market.\n\nThe branding process began with extensive moodboarding to define the visual direction — incorporating a sophisticated palette of deep navy blue and gold to evoke trust, professionalism, and financial expertise. The textures of marble and linen were chosen to add a premium feel to the brand materials.\n\nThe logo features a bold WB monogram with gold accent elements, representing stability and growth. The intertwined letters symbolize the partnership between the firm and its clients. Alternative logo versions were created for different applications and digital contexts.\n\nThe brand was extended into elegant business card designs with a navy blue base and gold foil details, communicating luxury and reliability. Social media content was developed for Instagram, featuring financial tips, motivational quotes, and service announcements — all aligned with the brand's visual language.\n\nThe color palette (#1B2A4A, #C8A961, #F5F5F0, #2C3E6B, #8B7339) was carefully selected to communicate authority, trustworthiness, and sophistication — essential attributes for an accounting practice.",
+    platform: "Canva / Adobe Illustrator / Figma",
+    target: "Establish trustworthy corporate visual identity",
+    category: "branding",
+    highlights: [
+      "Logo design with WB monogram concept",
+      "Navy blue and gold premium color palette",
+      "Business card design with gold foil effect",
+      "Social media content strategy for Instagram",
+      "Moodboarding with marble and linen textures",
+      "Cohesive brand identity across all touchpoints",
+    ],
+    image: "/lovable-uploads/wb-accounting-logo.png",
+    galleryImages: [
+      "/lovable-uploads/wb-accounting-logo.png",
+      "/lovable-uploads/wb-accounting-moodboard.png",
+      "/lovable-uploads/wb-accounting-business-card.png",
+      "/lovable-uploads/wb-accounting-post-1.png",
+      "/lovable-uploads/wb-accounting-post-2.png",
+      "/lovable-uploads/wb-accounting-post-3.png",
+    ],
+    icon: <Calculator className="h-6 w-6" />,
+    note: "This project was developed as a branding case study, showcasing the full creative process from moodboarding to final deliverables for the financial services sector.",
   },
 ];
