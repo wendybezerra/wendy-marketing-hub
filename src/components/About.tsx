@@ -33,14 +33,14 @@ const About = () => {
           {/* Photo + Text */}
           <div className="flex flex-col items-center mb-12">
             <div className="relative mb-10">
-              <div className="w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden shadow-card border-4 border-white">
+              <div className="w-56 h-56 md:w-64 md:h-64 rounded-2xl overflow-hidden shadow-card border-4 border-white">
                 <img
                   src="/lovable-uploads/wendy-profile.png"
                   alt="Wendy Bezerra"
                   className="w-full h-full object-cover object-top"
                 />
               </div>
-              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-coral rounded-full px-4 py-1.5 shadow-lg">
+              <div className="absolute -bottom-3 -right-3 bg-coral rounded-xl px-4 py-2 shadow-lg">
                 <span className="text-white font-bold text-xs text-center leading-tight whitespace-nowrap">Full Stack & AI Dev</span>
               </div>
             </div>
