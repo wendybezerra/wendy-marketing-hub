@@ -1,0 +1,89 @@
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-react";
+
+const Contact = () => {
+  const contactInfo = [
+    { icon: <Mail className="h-6 w-6" />, title: "Email", content: "wendybezerra.dev@gmail.com", link: "mailto:wendybezerra.dev@gmail.com" },
+    { icon: <Phone className="h-6 w-6" />, title: "Phone", content: "+1 (306) 850-5992", link: "tel:+13068505992" },
+    { icon: <MapPin className="h-6 w-6" />, title: "Location", content: "Saskatoon, SK - Canada", link: null },
+  ];
+
+  const socialLinks = [
+    { icon: <Linkedin className="h-5 w-5" />, name: "LinkedIn", link: "https://www.linkedin.com/in/wendymbezerra/" },
+    { icon: <Github className="h-5 w-5" />, name: "GitHub", link: "https://github.com/wendybezerra" },
+  ];
+
+  return (
+    <section id="contact" className="py-20 bg-gradient-hero">
+      <div className="container mx-auto px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Let's Talk?</h2>
+            <div className="w-24 h-1 bg-white mx-auto mb-8"></div>
+            <p className="text-lg text-white/90 max-w-2xl mx-auto">
+              Ready to create campaigns that deliver exceptional results? Get in touch and let's transform your marketing strategy.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12">
+            <Card className="p-8 bg-white/10 backdrop-blur-sm border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <Input placeholder="Your Name" className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:border-white" />
+                  <Input type="email" placeholder="Your Email" className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:border-white" />
+                </div>
+                <Input placeholder="Subject" className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:border-white" />
+                <Textarea placeholder="Your Message" rows={5} className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:border-white resize-none" />
+                <Button className="w-full bg-white text-coral hover:bg-white/90 font-semibold text-lg py-6">
+                  Send Message
+                </Button>
+              </form>
+            </Card>
+
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+                <div className="space-y-4">
+                  {contactInfo.map((info, index) => (
+                    <a key={index} href={info.link || undefined} className="flex items-center space-x-4 text-white/90 hover:text-white transition-colors">
+                      <div className="p-3 bg-white/20 rounded-lg">{info.icon}</div>
+                      <div>
+                        <p className="text-sm text-white/70">{info.title}</p>
+                        <p className="font-medium">{info.content}</p>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-6">Social Media</h3>
+                <div className="flex space-x-4">
+                  {socialLinks.map((social, index) => (
+                    <a key={index} href={social.link} className="p-3 bg-white/20 rounded-lg text-white hover:bg-white/30 transition-colors">
+                      {social.icon}
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              <div className="p-6 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
+                <h4 className="font-semibold text-white mb-2">Availability</h4>
+                <p className="text-white/80 text-sm">
+                  Monday to Friday: 9am to 6pm<br />
+                  Response within 24 hours
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
