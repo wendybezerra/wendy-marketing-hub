@@ -1,73 +1,78 @@
-# Welcome to your Lovable project
+# Wendy Bezerra — Marketing Portfolio
 
-## Project info
+Creative marketing professional crafting brands, stories, and digital experiences that connect, engage, and convert.
 
-**URL**: https://lovable.dev/projects/ce9362da-f660-4f30-9009-5aee8059423f
+## 🌐 Live Portfolio  
+👉 https://wendy-marketing-hub.vercel.app/
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## About
 
-**Use Lovable**
+I build marketing experiences that go beyond visuals.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ce9362da-f660-4f30-9009-5aee8059423f) and start prompting.
+My work sits at the intersection of:
+- strategy
+- storytelling
+- design
+- user experience
 
-Changes made via Lovable will be committed automatically to this repo.
+Every project is driven by intention — aligning brand voice, audience perception, and business goals into one cohesive narrative.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Selected Work
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Brand Storytelling
+Crafting brand identities and narratives that feel clear, consistent, and emotionally engaging.
 
-Follow these steps:
+### Landing Pages
+Designing digital experiences that guide users naturally — combining clarity, structure, and conversion-focused thinking.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Digital Strategy
+Building marketing directions that connect positioning, content, and performance.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Content & Visual Direction
+Creating cohesive visuals and messaging that strengthen brand perception across platforms.
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## Approach
 
-**Edit a file directly in GitHub**
+I believe strong marketing is not just about aesthetics — it's about meaning.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Every decision is guided by:
+- clarity over noise  
+- intention over trends  
+- connection over volume  
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## What This Portfolio Reflects
 
-## What technologies are used for this project?
+- Strategic and creative thinking  
+- Strong sense of brand and visual identity  
+- User-centered digital experiences  
+- Execution from idea to delivery  
+- Attention to detail and consistency  
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Tools & Skills
 
-## How can I deploy this project?
+- Brand Strategy  
+- Storytelling  
+- Content Direction  
+- UX & Conversion Thinking  
+- Digital Marketing  
+- Web Design (React, Tailwind)
 
-Simply open [Lovable](https://lovable.dev/projects/ce9362da-f660-4f30-9009-5aee8059423f) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## Let’s Connect
 
-Yes, you can!
+LinkedIn  
+https://linkedin.com/in/wendymbezerra  
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+GitHub  
+https://github.com/wendybezerra
